@@ -81,6 +81,9 @@ export const About = () => {
           {" "}
           <br />
           <b>Location:</b> 7927 N Olympia st
+          <br />
+          <br />
+          <b>Date:</b> Sunday September 5th
         </p>
       </div>
       <div
