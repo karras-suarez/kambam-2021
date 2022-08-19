@@ -1,5 +1,5 @@
 import birdShip from "./images/bird-ship.svg";
-import kambam from "./images/kambam.svg";
+import kambam from "./images/kambam2022_title.svg";
 import {
   CloudsBackground,
   CloudsBackgroundMob,
