@@ -1,4 +1,3 @@
-import birdShip from "./images/bird-ship.svg";
 import kambam from "./images/kambam2022_title.svg";
 import {
   CloudsBackground,
@@ -18,13 +17,12 @@ export const Home = () => {
         </div>
       </div>
       <div className="intro">
-        <img src={birdShip} alt="hey" className="bird-ship" />
-        <h1>
-          HOLD ON TO <br />
-          YOUR BUTTS
-        </h1>
-        <p>You're invited to </p>
+      <p>You're invited to </p>
         <img src={kambam} alt="hey" className="kambam" />
+        <h1>
+          ENTER THE COWABUNGAVERSE
+        </h1>
+        
       </div>
     </>
   );

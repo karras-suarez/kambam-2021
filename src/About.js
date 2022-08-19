@@ -15,6 +15,7 @@ import {
   eleven,
   twelve,
   thirteen,
+  fourteen
 } from "./images/birthday-photos";
 
 const random = Math.floor(Math.random() * 13);
@@ -32,6 +33,7 @@ const numbers = [
   eleven,
   twelve,
   thirteen,
+  fourteen
 ];
 export const About = () => {
   const matches = useMediaQuery("(min-width:600px)");
@@ -64,8 +66,7 @@ export const About = () => {
       <div className="card" style={{ width: matches ? "600px" : "90%" }}>
         <h2>A Backyard Birthday</h2>
         <p>
-          You're invited to this dog friendly, fully fenced, everyone vaxxed
-          party!
+          You're invited to Kami's 32nd birthday and backyard campout!
         </p>
         <p>
           This year there will <b>not</b> be games for safety reasons, but I
@@ -102,12 +103,12 @@ export const About = () => {
           </p>
           <p style={{ marginBottom: "20px" }}>
             <b>6pm:</b> <br />
-            Kami does standup comedy
+            Pizza is ordered from 48 North
           </p>
           <p style={{ marginBottom: "20px" }}>
             <b>6:15pm</b> <br />
-            open mic for more comedy, <br />
-            monologues, speeches, and music?
+            open mic for everyone <br />and all things. <br /> <br />
+            (Adam Michel must be pre approve content) <br /><br /> just kidding <br />probably
           </p>
         </div>
       </div>

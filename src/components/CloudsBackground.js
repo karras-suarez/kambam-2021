@@ -1,4 +1,4 @@
-import clouds from "../images/clouds.svg";
+import clouds from "../images/cows.svg";
 export const CloudsBackground = () => {
   return (
     <div>
