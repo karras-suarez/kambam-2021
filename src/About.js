@@ -1,6 +1,5 @@
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import kambam from "./images/kambam_hashtag.svg";
-import bandana from "./images/bandana preview.svg";
+import bandana from "./images/bandana preview-2022.svg";
 import {
   one,
   two,
@@ -40,7 +39,7 @@ export const About = () => {
 
   return (
     <>
-      <img src={kambam} alt="kambam logo" className="kambam" />
+
       <div
         style={{
           position: "relative",
@@ -64,28 +63,23 @@ export const About = () => {
         />
       </div>
       <div className="card" style={{ width: matches ? "600px" : "90%" }}>
-        <h2>A Backyard Birthday</h2>
-        <p>
-          You're invited to Kami's 32nd birthday and backyard campout!
-        </p>
-        <p>
-          This year there will <b>not</b> be games for safety reasons, but I
-          think I have a nice solution to utilize the prize table this year.
-        </p>
-        <p>
-          Also note, I am trying to gather food for all the dietary restrictions
-          i am aware of: veg, lactose intolerant, and gluten free. But I am
-          struggling and would some suggestions or contributions to the food
-          table
-        </p>
+        <h2>A Backyard Birthday and Campout</h2>
         <p>
           {" "}
           <br />
-          <b>Location:</b> 7927 N Olympia st
-          <br />
-          <br />
-          <b>Date:</b> Sunday September 5th
+          <b>Date:</b> Saturday September 3rd
         </p>
+        <p>
+          Come chill in the backyard with friends, drinks, <br /> pizza and most of all, YOU.
+          <br /> 
+          <br /> 
+          Badminton will be up, cornhole might be brought by friends(?), and the pool will be available for the bold and drunk. Bring your bikinis, trunks, and speedos.
+        </p>
+        <p>
+          Want to campout? Bring your tent or really whatever outside sleeping situation you desire! 
+          We have 2 fire pits, relaxing areas, and a big open yard area for you to find your personal space.<br /> <br />  Dog friendly(if Bezi has met them)
+        </p>
+        
       </div>
       <div
         className="card"
@@ -95,6 +89,7 @@ export const About = () => {
           margin: "20px auto",
         }}
       >
+        
         <h3 style={{ textAlign: "center" }}>Agenda</h3>
         <div style={{ display: matches ? "flex" : "block", margin: "auto" }}>
           <p style={{ marginBottom: "20px" }}>
@@ -106,11 +101,13 @@ export const About = () => {
             Pizza is ordered from 48 North
           </p>
           <p style={{ marginBottom: "20px" }}>
-            <b>6:15pm</b> <br />
+            <b>6:30pm</b> <br />
             open mic for everyone <br />and all things. <br /> <br />
             (Adam Michel must be pre approve content) <br /><br /> just kidding <br />probably
           </p>
+          
         </div>
+        
       </div>
       <div
         className="card"
@@ -119,9 +116,9 @@ export const About = () => {
         <h3 style={{ textAlign: "center" }}>what else to expect??</h3>
         <ul style={{ textAlign: "left" }}>
           <li>take a photo at our Kambam photo booth.</li>
-          <li>Play cornhole with friends.</li>
+          <li>BYOB.</li>
           <li>
-            get your own 'Bird in Spaceship' onsite screen printed bandana!
+            Screen print your own COWABUNGA bandana!
           </li>
         </ul>
         <div

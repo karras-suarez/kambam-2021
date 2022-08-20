@@ -180,4 +180,5 @@ h1 {
   box-sizing: border-box;
   border: 3px solid black;
   box-shadow: 10px 10px black;
+  text-align: left;
 }
