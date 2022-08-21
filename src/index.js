@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Firebase } from './components/firebase/Firebase'
-import { FirebaseContext } from './components/firebase/FirebaseContext'
+import {
+  getQuestions,
+  postQuestion,
+  listen,
+} from './components/firebase/Firebase';
+import { FirebaseContext } from './components/firebase/FirebaseContext';
 
 ReactDOM.render(
-  <FirebaseContext.Provider value={new Firebase()}>
+  <FirebaseContext.Provider value={{ getQuestions, postQuestion, listen }}>
     <App />
   </FirebaseContext.Provider>,
 

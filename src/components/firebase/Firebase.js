@@ -1,6 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/database";
-import "firebase/auth";
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getDatabase, ref, onValue, get, child, push } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -9,16 +9,35 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
-  databaseURL: process.env.REACT_APP_DATABASE_URL,
 };
 
-export class Firebase {
-  constructor() {
-    firebase.initializeApp(firebaseConfig);
-    this.db = firebase.database();
-    this.auth = firebase.auth();
-  }
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const dbRef = ref(db);
+getAuth(app);
 
-  questions = () => this.db.ref("questions");
-  getQuestions = () => this.db.ref("questions");
-}
+export const postQuestion = (question, answer = '') => {
+  const updates = {
+    question,
+    answer,
+  };
+
+  return push(ref(db, 'questions'), updates);
+};
+
+export const listen = (formatter, setter) => {
+  return onValue(dbRef, (snapshot) => {
+    const { questions } = snapshot.val();
+    const formated = formatter(questions);
+    setter(formated);
+  });
+};
+
+export const getQuestions = async () => {
+  const snap = await get(child(dbRef, 'questions'));
+  if (snap.exists()) {
+    return snap.val();
+  } else {
+    return [];
+  }
+};
