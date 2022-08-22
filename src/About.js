@@ -93,7 +93,7 @@ export const About = () => {
         <h3 style={{ textAlign: "center" }}>Agenda</h3>
         <div style={{ display: matches ? "flex" : "block", margin: "auto" }}>
           <p style={{ marginBottom: "20px" }}>
-            <b>4pm:</b> <br />
+            <b>5pm:</b> <br />
             gather and chill
           </p>
           <p style={{ marginBottom: "20px" }}>
