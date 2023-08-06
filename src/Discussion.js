@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, TextField, Grid, Typography } from '@material-ui/core';
+import { Button, TextField, Grid, Typography } from '@mui/material';
 import { useFirebase } from './components/firebase/FirebaseContext';
 import { format } from './utils';
 
@@ -64,9 +64,9 @@ export const Discussion = () => {
                   }}
                 >
                   <Typography key={id} variant='subtitle1'>
-                    <h3 style={{ display: 'inline', marginRight: '10px' }}>
+                    <Typography style={{ display: 'inline', marginRight: '10px', fontSize: '1.17em' }}>
                       Q:
-                    </h3>
+                    </Typography>
                     {question}
                   </Typography>
 
@@ -74,9 +74,9 @@ export const Discussion = () => {
                     {answer && (
                       <>
                         <hr />
-                        <h3 style={{ display: 'inline', marginRight: '10px' }}>
+                        <Typography style={{ display: 'inline', marginRight: '10px',  fontSize: '1.17em' }}>
                           A:
-                        </h3>
+                        </Typography>
                         {answer}
                       </>
                     )}

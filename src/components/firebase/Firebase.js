@@ -1,6 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getDatabase, ref, onValue, get, child, push } from 'firebase/database';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getDatabase, ref, onValue, get, child, push } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -16,13 +16,13 @@ const db = getDatabase(app);
 const dbRef = ref(db);
 getAuth(app);
 
-export const postQuestion = (question, answer = '') => {
+export const postQuestion = (question, answer = "") => {
   const updates = {
     question,
     answer,
   };
 
-  return push(ref(db, 'questions'), updates);
+  return push(ref(db, "questions"), updates);
 };
 
 export const listen = (formatter, setter) => {
@@ -34,10 +34,14 @@ export const listen = (formatter, setter) => {
 };
 
 export const getQuestions = async () => {
-  const snap = await get(child(dbRef, 'questions'));
-  if (snap.exists()) {
-    return snap.val();
-  } else {
-    return [];
+  try {
+    const snap = await get(child(dbRef, 'questions'));
+    if (snap.exists()) {
+      return snap.val();
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.log("error", error)
   }
 };

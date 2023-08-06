@@ -2,10 +2,10 @@
   text-align: center;
 
   min-height: 100vh;
-  color: black;
+  color: #de1c85;
 }
 html {
-  background-color: white;
+  background-color: #ffc9ea;
   width: 100vw;
 }
 
@@ -19,7 +19,7 @@ nav {
 }
 
 nav a {
-  color: black;
+  color: #de1c85;
   margin: 40px 0;
   text-decoration: none;
   font-weight: 500;

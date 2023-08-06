@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { About } from "./About";
+import { PhotoGallery } from "./Gallery";
 import { Discussion } from "./Discussion";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route path="/discussion">
               <Discussion />
+            </Route>
+            <Route path="/gallery">
+              <PhotoGallery />
             </Route>
             <Route path="/">
               <Home />
