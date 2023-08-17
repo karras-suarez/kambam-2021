@@ -2,11 +2,13 @@
   text-align: center;
 
   min-height: 100vh;
-  color: #de1c85;
+  color: #1c3664;
+  font-family: 'Fira Code';
 }
 html {
-  background-color: #ffc9ea;
+  background-color: #d5eff8;
   width: 100vw;
+  
 }
 
 .App-link {
@@ -14,15 +16,21 @@ html {
 }
 
 nav {
-  max-width: 700px;
+  /* max-width: 80vw; */
   margin: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax( 1fr);
+  align-items: center;
+  /* width: 75vw; */
 }
 
 nav a {
-  color: #de1c85;
-  margin: 40px 0;
+
+  margin: 20px 0;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 3vmin;
 }
 
 h1 {
@@ -31,7 +39,9 @@ h1 {
   margin-left: 40px;
   margin-right: 40px;
   font-size: 8vmin;
-  text-shadow: 1px 1px 10px white;
+  /* text-shadow: 1px 1px 10px white; */
+  color: #d5eff8;
+  opacity: 0;
 }
 
 .bird-ship {
@@ -39,8 +49,16 @@ h1 {
 }
 
 .kambam {
-  width: 75vw;
+  width: 100vw;
   margin-top: 10px;
+}
+
+.moon{
+  /* position: absolute; */
+  width: 80vw;
+  margin-top: 50px;
+  /* left: 0; */
+  /* margin-left: ; */
 }
 
 .clouds {
@@ -83,10 +101,51 @@ h1 {
 }
 .intro {
   z-index: 0;
-  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
+.background{
+  background-image: url('/src/images/dreamland.jpg');
+  background-size: cover;
+  height: 1200px;
+}
+
+.blob1{
+  position:absolute;
+  top:10vh;
+  left:5vw;
+  width: 60vw;
+  z-index: -10;
+}
+
+.blob2{
+  position:absolute;
+  width: 50vw;
+  z-index: -10;
+  right: 40px;
+  top:25vh;
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 200;
+  letter-spacing: 1.2vmin;
+  font-size: 3vmin;
+}
 @media (min-width: 700px) {
+  .blob1{
+  position:absolute;
+  width: 35vw;
+  z-index: -10;
+}
+
+.blob2{
+  position:absolute;
+  width: 50vw;
+  z-index: -10;
+  right: 100px;
+  top:25vh;
+}
   .bird-ship {
     width: 25vw;
   }
@@ -128,15 +187,45 @@ h1 {
     font-weight: 900;
     margin-top: 10vh;
     margin-bottom: 0;
-    font-size: 8vmin;
+    font-size: 9vmin;
+    font-family: 'bagel FAT one'
   }
   h2 {
     margin-top: 0;
+    font-weight: 200;
+    letter-spacing: 1.2vmin;
+    font-size: 3vmin;
   }
   .kambam {
-    width: 25vw;
-    margin-top: 10px;
-    background-color: white;
+    width: 60vw;
+    margin-top: 150px;
+    margin-bottom: -100px;
+    /* background-color: white; */
+  }
+
+  nav {
+    max-width: 700px;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax( 1fr);
+    align-items: center;
+    width: 75vw;
+  }
+  
+  nav a {
+  
+    margin: 40px 0;
+    text-decoration: none;
+    font-weight: 500;
+  
+  }
+
+  .moon{
+    /* position: absolute; */
+    width: 80vw;
+    /* left: 0; */
+    /* margin-left: ; */
   }
   @keyframes Move-across {
     from {
@@ -178,7 +267,8 @@ h1 {
   margin: auto;
   padding: 40px;
   box-sizing: border-box;
-  border: 3px solid black;
-  box-shadow: 10px 10px black;
+  border: 3px solid #1c3664;
+  border-radius: 4px;
+  box-shadow: 10px 10px #1c3664;
   text-align: left;
 }
