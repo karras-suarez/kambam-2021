@@ -91,7 +91,7 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>Music:</b> We are so excited to be joined by musical talent such as <b>Jewel Riders</b> and <b>Mr.Boy</b> this year!
+          <b>Music:</b> We are so excited to be joined by musical talent such as <a target='blank' href="https://www.instagram.com/jewelridersband/"><b>Jewel Riders</b></a> and <a target='blank' href="https://instagram.com/mr.boy_pdx"><b>Mr.Boy</b></a> this year!
         </p>
         </p>
       </div>
