@@ -1,5 +1,5 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
-import bandana from "./images/bandana preview-2022.svg";
+import print from "./images/kambam2023 print final.png";
 import {
   one,
   two,
@@ -91,7 +91,7 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>show art?</b> If you have art you would like to show in the Ponk area, I'd love to display it for the day!
+          <b>Music:</b> We are so excited to be joined by musical talent such as <b>Jewel Riders</b> and <b>Mr.Boy</b> this year!
         </p>
         </p>
       </div>
@@ -113,14 +113,14 @@ export const About = () => {
             <b>6pm:</b> <br />
             Shows begin
           </p>
-          {/* <p style={{ marginBottom: "20px" }}>
-            <b>6:30pm</b> <br />
-            open mic for everyone <br />
-            and all things. <br /> <br />
+          <p style={{ marginBottom: "20px", marginLeft: "20px"  }}>
+            <b>8:00pm</b> <br />
+            Music Begins <br />
+            {/* and all things. <br /> <br />
             (Adam Michel must be pre approve content) <br />
             <br /> just kidding <br />
-            probably
-          </p> */}
+            probably */}
+          </p>
         </div>
       </div>
       <div
@@ -141,12 +141,12 @@ export const About = () => {
             padding: "20px",
           }}
         >
-          {/* <img
+          <img
             style={{ margin: "auto", width: matches ? "300px" : "90%" }}
-            src={bandana}
-            alt="bandana design"
-          /> */}
-          <p>print example coming soon</p>
+            src={print}
+            alt="print design"
+          />
+          <p>print example</p>
         </div>
       </div>
     </>
