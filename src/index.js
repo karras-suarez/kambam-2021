@@ -1,21 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { Authorization } from "./components/authorization/authorization";
+import reportWebVitals from "./reportWebVitals";
 import {
   getQuestions,
   postQuestion,
   listen,
-} from './components/firebase/Firebase';
-import { FirebaseContext } from './components/firebase/FirebaseContext';
+  getPSWD
+} from "./components/firebase/Firebase";
+import { FirebaseContext } from "./components/firebase/FirebaseContext";
+import { BrowserRouter } from "react-router-dom"
 
 ReactDOM.render(
-  <FirebaseContext.Provider value={{ getQuestions, postQuestion, listen }}>
-    <App />
-  </FirebaseContext.Provider>,
+  <BrowserRouter>
+    <FirebaseContext.Provider value={{ getQuestions, postQuestion, listen, getPSWD }}>
+      <Authorization>
+        <App />
+      </Authorization>
+    </FirebaseContext.Provider>
+  </BrowserRouter>,
 
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
