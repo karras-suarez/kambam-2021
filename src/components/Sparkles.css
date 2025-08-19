@@ -1,0 +1,355 @@
+.sparkles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF 0%, transparent 70%);
+  /* box-shadow: 0 0 6px currentColor; */
+  animation: sparkle-animation linear infinite;
+  filter: blur(3px);
+}
+
+/* Create different sparkle types for variety */
+.sparkle:nth-child(3n) {
+  background: radial-gradient(circle, #FFF 0%, #87CEEB 30%, transparent 70%);
+  animation: sparkle-animation-blue linear infinite;
+}
+
+.sparkle:nth-child(3n+1) {
+  background: radial-gradient(circle, #FFF 0%, #FFB6C1 30%, transparent 70%);
+  animation: sparkle-animation-pink linear infinite;
+}
+
+.sparkle:nth-child(3n+2) {
+  background: radial-gradient(circle, #FFF 0%, #98FB98 30%, transparent 70%);
+  animation: sparkle-animation-green linear infinite;
+}
+
+/* Special sparkle effects */
+.special-sparkle {
+  background: radial-gradient(circle, #FFF 0%, #FFD700 20%, #FF69B4 40%, transparent 70%) !important;
+  filter: blur(2px) brightness(1.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.special-sparkle::before {
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, transparent 70%);
+  animation: special-glow linear infinite;
+}
+
+@keyframes special-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.3) rotate(90deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.6) rotate(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.3) rotate(270deg);
+  }
+}
+
+/* Movement patterns */
+.circular-move {
+  animation: sparkle-animation-circular linear infinite !important;
+}
+
+.zigzag-move {
+  animation: sparkle-animation-zigzag linear infinite !important;
+}
+
+@keyframes sparkle-animation-circular {
+  0% {
+    transform: scale(0) rotate(0deg) translateX(0px) translateY(0px);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1) rotate(90deg) translateX(20px) translateY(-20px);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg) translateX(0px) translateY(-40px);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1) rotate(270deg) translateX(-20px) translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateX(0px) translateY(0px);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-animation-zigzag {
+  0% {
+    transform: scale(0) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1) rotate(72deg) translateX(15px);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.2) rotate(144deg) translateX(-15px);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(1.4) rotate(216deg) translateX(15px);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.2) rotate(288deg) translateX(-15px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateX(0px);
+    opacity: 0;
+  }
+}
+
+/* Sparkle dust particles */
+.sparkle-dust {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: dust-float linear infinite;
+}
+
+@keyframes dust-float {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(0.5);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-30px) translateX(10px) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-10px) scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-90px) translateX(15px) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-120px) translateX(0px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(0) rotate(0deg) translateY(0px);
+    opacity: 0;
+    filter: blur(3px) brightness(1);
+  }
+  25% {
+    transform: scale(1) rotate(90deg) translateY(-5px);
+    opacity: 1;
+    filter: blur(2px) brightness(1.5);
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg) translateY(-10px);
+    opacity: 0.9;
+    filter: blur(1px) brightness(2);
+  }
+  75% {
+    transform: scale(1) rotate(270deg) translateY(-5px);
+    opacity: 1;
+    filter: blur(2px) brightness(1.5);
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateY(0px);
+    opacity: 0;
+    filter: blur(3px) brightness(1);
+  }
+}
+
+@keyframes sparkle-animation-blue {
+  0% {
+    transform: scale(0) rotate(0deg) translateX(0px);
+    opacity: 0;
+    filter: blur(3px) brightness(1) hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg) translateX(5px);
+    opacity: 1;
+    filter: blur(2px) brightness(1.8) hue-rotate(180deg);
+  }
+  50% {
+    transform: scale(1.4) rotate(180deg) translateX(10px);
+    opacity: 0.9;
+    filter: blur(1px) brightness(2.2) hue-rotate(360deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg) translateX(5px);
+    opacity: 1;
+    filter: blur(2px) brightness(1.8) hue-rotate(180deg);
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateX(0px);
+    opacity: 0;
+    filter: blur(3px) brightness(1) hue-rotate(0deg);
+  }
+}
+
+@keyframes sparkle-animation-pink {
+  0% {
+    transform: scale(0) rotate(0deg) translateY(0px) translateX(0px);
+    opacity: 0;
+    filter: blur(3px) brightness(1) saturate(1);
+  }
+  25% {
+    transform: scale(1.2) rotate(90deg) translateY(-8px) translateX(8px);
+    opacity: 1;
+    filter: blur(2px) brightness(1.6) saturate(1.5);
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg) translateY(-15px) translateX(15px);
+    opacity: 0.9;
+    filter: blur(1px) brightness(2.5) saturate(2);
+  }
+  75% {
+    transform: scale(1.2) rotate(270deg) translateY(-8px) translateX(8px);
+    opacity: 1;
+    filter: blur(2px) brightness(1.6) saturate(1.5);
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateY(0px) translateX(0px);
+    opacity: 0;
+    filter: blur(3px) brightness(1) saturate(1);
+  }
+}
+
+@keyframes sparkle-animation-green {
+  0% {
+    transform: scale(0) rotate(0deg) translateY(0px) scale(1);
+    opacity: 0;
+    filter: blur(3px) brightness(1) contrast(1);
+  }
+  25% {
+    transform: scale(1.3) rotate(90deg) translateY(8px) scale(1.1);
+    opacity: 1;
+    filter: blur(2px) brightness(1.7) contrast(1.3);
+  }
+  50% {
+    transform: scale(1.6) rotate(180deg) translateY(15px) scale(1.2);
+    opacity: 0.9;
+    filter: blur(1px) brightness(2.3) contrast(1.6);
+  }
+  75% {
+    transform: scale(1.3) rotate(270deg) translateY(8px) scale(1.1);
+    opacity: 1;
+    filter: blur(2px) brightness(1.7) contrast(1.3);
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateY(0px) scale(1);
+    opacity: 0;
+    filter: blur(3px) brightness(1) contrast(1);
+  }
+}
+
+/* Add some additional sparkle variations */
+.sparkle:nth-child(odd) {
+  animation-timing-function: ease-in-out;
+}
+
+.sparkle:nth-child(even) {
+  animation-timing-function: ease-in;
+}
+
+/* Create a subtle glow effect */
+.sparkle::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  opacity: 0.6;
+  animation: glow-animation linear infinite;
+  filter: blur(2px);
+}
+
+.sparkle::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  opacity: 0.3;
+  animation: glow-animation-delayed linear infinite;
+  filter: blur(4px);
+}
+
+@keyframes glow-animation {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    /* filter: blur(10px); */
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.5);
+    /* filter: blur(10px); */
+  }
+}
+
+@keyframes glow-animation-delayed {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.8);
+  }
+}
+
+/* Add sparkle trail effect for some sparkles */
+.sparkle:nth-child(5n)::before {
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  transform: rotate(45deg);
+  animation: trail-animation linear infinite;
+}
+
+@keyframes trail-animation {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.5);
+  }
+  50% {
+    opacity: 0.8;
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.5);
+  }
+}

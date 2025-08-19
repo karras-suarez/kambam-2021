@@ -16,6 +16,8 @@ import {
   thirteen,
   fourteen,
 } from "./images/birthday-photos";
+import goldsnake1 from "./images/goldsnake1.png";
+import goldsnake2 from "./images/goldsnake2.png";
 
 const random = Math.floor(Math.random() * 13);
 const numbers = [
@@ -41,37 +43,62 @@ export const About = () => {
     <>
       <div
         style={{
-          position: "relative",
-          height: "400px",
-          width: matches ? "600px" : "100%",
+          position: "fixed",
+          height: "100vh",
+          width: "100%",
           overflow: "hidden",
-          margin: matches ? "20px auto" : "auto",
+          margin: "auto",
           verticalAlign: "middle",
+          backgroundImage: `url(${goldsnake1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          zIndex:-1
         }}
       >
-        <img
+        
+      </div>
+      <div className="card" style={{ width: matches ? "800px" : "90%" }}>
+      <img
           style={{
-            position: "absolute",
-            left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)",
+            // position: "absolute",
+            left: "0",
+            top: "0",
+            // transform: "translate(-50%, -50%)",
             width: "100%",
           }}
-          src={numbers[random]}
+          src={goldsnake2}
           alt="people enjoying a party"
         />
-      </div>
-      <div className="card" style={{ width: matches ? "600px" : "90%" }}>
-        <h3>A Backyard Birthday and Campout</h3>
+        <h2>A Backyard Birthday Show</h2>
         <p>
           {" "}
           <br />
-          <b>Date:</b> Sunday September 3rd (day before labor day is observed)
+          <b>Date:</b> Saturday August 30th 2025
         </p>
         <p>
-          Come dream in the backyard with friends, drinks, <br /> food and most
-          of all, YOU.
+          {" "}
           <br />
+          <b>Time:</b> 6:00pm PST
+        </p>
+        <p>
+          {" "}
+          <br />
+          <b>Food:</b> Fire on the Mountain catering
+        </p>
+        <p>
+          {" "}
+          <br />
+          <b>Dress code:</b> Play dress up! Whatever that means to you. Bonus points for all things frilly, shimmery, snakey, or gold.
+        </p>
+        <p>
+          {" "}
+          <br />
+          <b>entertainment:</b> still being finalized ;)
+        </p>
+        <p>
+          KAMBAM is BACK. With a theme centered around Kami's snake engagement ring, come to Kami's favorite place (her backyard) and have a great night of art, friendship, and entertainement.
+          {/* <br />
           <br />
           No presents necessary, just bring the gift that is yourself! There will be opportunity to tip the performers :)
           <br />
@@ -82,72 +109,68 @@ export const About = () => {
           Want to campout? Bring your tent or really whatever outside sleeping
           situation you desire! We have 2 fire pits, relaxing areas, and a big
           open yard area for you to find your personal space.
-          <br /> <br /> Dog friendly(if Bezi has met them)
-          <p>
-          {" "}
-          <br />
-          <b>Ponk?</b> I am trying to set up a dark area so we can play with my latest project Ponk. More details on what this means at the party.
-        </p>
-        <p>
+          <br /> <br /> Dog friendly(if Bezi has met them) */}
+          
+        {/* <p>
           {" "}
           <br />
           <b>Music:</b> We are so excited to be joined by musical talent such as <a target='blank' href="https://www.instagram.com/jewelridersband/"><b>Jewel Riders</b></a> and <a target='blank' href="https://instagram.com/mr.boy_pdx"><b>Mr.Boy</b></a> this year!
-        </p>
+        </p> */}
         </p>
       </div>
       <div
         className="card"
         style={{
           textAlign: "left",
-          width: matches ? "600px" : "90%",
+          width: matches ? "800px" : "90%",
           margin: "20px auto",
         }}
       >
-        <h3 style={{ textAlign: "center" }}>Agenda</h3>
+        <h2 className="about-headers" style={{ textAlign: "center" }}>Agenda</h2>
         <div style={{ display: matches ? "flex" : "block", margin: "auto" }}>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
-            <b>5pm:</b> <br />
-            gather and chill
+            <b>6:00pm:</b> <br />
+            doors open -  sign the card, take a photo, do some screen printing
           </p>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
-            <b>6pm:</b> <br />
-            Shows begin
+            <b>7:00pm:</b> <br />
+            Group photo and Show begins
           </p>
-          <p style={{ marginBottom: "20px", marginLeft: "20px"  }}>
+          {/* <p style={{ marginBottom: "20px", marginLeft: "20px"  }}>
             <b>8:00pm</b> <br />
-            Music Begins <br />
+            Music Begins <br /> */}
             {/* and all things. <br /> <br />
             (Adam Michel must be pre approve content) <br />
             <br /> just kidding <br />
             probably */}
-          </p>
+          {/* </p> */}
         </div>
       </div>
       <div
         className="card"
-        style={{ width: matches ? "600px" : "90%", textAlign: "left" }}
+        style={{ width: matches ? "800px" : "90%", textAlign: "left" }}
       >
-        <h3 style={{ textAlign: "center" }}>what else to expect??</h3>
+        <h2 className="about-headers" style={{ textAlign: "center" }}>what else??</h2>
         <ul style={{ textAlign: "left" }}>
-          <li>take a photo at our Kambam photo booth.</li>
-          <li>BYOB.</li>
-          <li>pre-rolls provided.</li>
-          <li>Screen print your own dreamland items</li>
+          <li style={{marginBottom: "10px"}}>take a photo at our Kambam photo booth.</li>
+          <li style={{marginBottom: "10px"}}>BYOB.</li>
+          <li style={{marginBottom: "10px"}}>pre-rolls provided.</li>
+          <li style={{marginBottom: "10px"}}>On site screen printing</li>
         </ul>
-        <div
+        {/* <div
           style={{
             width: "calc(100% - 20px)",
             textAlign: "center",
             padding: "20px",
           }}
-        >
-          <img
+        > */}
+          {/* <img
             style={{ margin: "auto", width: matches ? "300px" : "90%" }}
             src={print}
             alt="print design"
-          />
-          <p>print example</p>
-        </div>
+          /> */}
+          {/* <p>print example</p>
+        </div> */}
       </div>
     </>
   );

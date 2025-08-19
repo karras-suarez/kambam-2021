@@ -1,8 +1,8 @@
 .App {
   text-align: center;
 
-  min-height: 100vh;
-  color: #1c3664;
+  max-height: 100vh;
+  /* color: #1c3664; */
   font-family: 'Fira Code';
 }
 html {
@@ -43,22 +43,43 @@ h1 {
   color: #d5eff8;
   opacity: 0;
 }
+h3{
+  font-family: 'Sancreek static', cursive;
+  font-size: 30px;
+  color: #FFF;
+  z-index: 100;
+  position: relative;
+  width: 50%;
+  margin: 150px auto;
+}
+
+.about-headers{
+  font-size: 1em;
+}
 
 .bird-ship {
   width: 75vw;
 }
 
 .kambam {
+  position: relative;
   width: 100vw;
-  margin-top: 10px;
+  /* margin-top: 80px; */
+  margin-left: -10px;
+  z-index: 20;
 }
 
 .moon{
   /* position: absolute; */
-  width: 80vw;
+  width: 100vw;
   margin-top: 50px;
   /* left: 0; */
   /* margin-left: ; */
+}
+
+
+.date{
+  text-shadow: 3px 3px 2px black;
 }
 
 .clouds {
@@ -90,24 +111,29 @@ h1 {
   width: 200%;
   overflow: hidden;
   height: 100vh;
-  z-index: -4;
+  /* z-index: -4; */
   animation: Move-across4 infinite 20s linear;
 }
 .movement {
   position: absolute;
   width: 100vw;
-  overflow: hidden;
+  top: 0;
+  z-index: 0;
+  overflow: none;
   height: 100vh;
+  background-image: url('./images/kambam2025-bg-mobile.jpeg');
+  background-size: cover;
+  background-position: bottom;
 }
 .intro {
   z-index: 0;
-  padding-bottom: 5vh;
+  /* padding-bottom: 5vh; */
 }
 
 .background{
   background-image: url('/src/images/dreamland.jpg');
   background-size: cover;
-  height: 1200px;
+  /* height: 1200px; */
 }
 
 .blob1{
@@ -127,16 +153,17 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
-  font-weight: 200;
-  letter-spacing: 1.2vmin;
+  margin-top: -30px;
+  margin-left: 30px;
+  font-weight: 600;
+  /* letter-spacing: 1.2vmin; */
   font-size: 3vmin;
 }
 @media (min-width: 700px) {
   .blob1{
   position:absolute;
   width: 35vw;
-  z-index: -10;
+  /* z-index: -10; */
 }
 
 .blob2{
@@ -179,9 +206,14 @@ h2 {
 
   .movement {
     position: absolute;
-    width: 100vw;
+    z-index: 20;
+    top:0;
+    /* width: 100vw; */
     overflow: hidden;
-    height: 100vh;
+    background-position: 0 -400px;
+    background-size: cover;
+    /* height: 100vh; */
+    /* background-image: url('./images/kambam'); */
   }
   h1 {
     font-weight: 900;
@@ -191,15 +223,25 @@ h2 {
     font-family: 'bagel FAT one'
   }
   h2 {
-    margin-top: 0;
+    margin-top: 20px;
     font-weight: 200;
-    letter-spacing: 1.2vmin;
+    /* letter-spacing: 1.2vmin; */
     font-size: 3vmin;
+  }
+  h3{
+    font-family: 'Sancreek static', cursive;
+    font-size: 50px;
+    color: #FFF;
+    z-index: 100;
+    position: relative;
+    margin-top: 350px;
   }
   .kambam {
     width: 60vw;
-    margin-top: 150px;
+    margin-top: -40px;
     margin-bottom: -100px;
+    z-index: 20;
+    position: relative;
     /* background-color: white; */
   }
 
@@ -263,12 +305,15 @@ h2 {
 }
 
 .card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
   margin: auto;
   padding: 40px;
   box-sizing: border-box;
-  border: 3px solid #1c3664;
+  padding-top: 70px;
+  /* border: 3px solid #1c3664; */
   border-radius: 4px;
-  box-shadow: 10px 10px #1c3664;
+  /* box-shadow: 10px 10px #1c3664; */
   text-align: left;
 }
+
+
