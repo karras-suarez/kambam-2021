@@ -5,7 +5,8 @@ import emailjs from "@emailjs/browser";
 import goldsnake1 from "../../images/goldsnake1.png";
 import { useFirebase } from "../firebase/FirebaseContext";
 emailjs.init({
-  publicKey: "dtqcYsRfEEsn5bTLU",
+  // @ts-ignore
+  publicKey: import.meta.env.VITE_PUBLIC_KEY,
 });
 
 export const RSVPForm = ({ setHasRSVP }) => {
