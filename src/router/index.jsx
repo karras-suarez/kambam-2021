@@ -5,6 +5,7 @@ import { PhotoGallery } from "../Gallery";
 import { Discussion } from "../Discussion";
 import { Header } from "../components/Header";
 import { Password } from "../components/authorization/password";
+
 export const Routes = () => {
   return (
     <>

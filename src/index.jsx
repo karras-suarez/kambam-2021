@@ -7,14 +7,16 @@ import {
   getQuestions,
   postQuestion,
   listen,
-  getPSWD
+  getPSWD,
+  postRSVP,
+  getRSVPStatus,
 } from "./components/firebase/Firebase";
 import { FirebaseContext } from "./components/firebase/FirebaseContext";
 import { BrowserRouter } from "react-router-dom"
 
 ReactDOM.render(
   <BrowserRouter>
-    <FirebaseContext.Provider value={{ getQuestions, postQuestion, listen, getPSWD }}>
+    <FirebaseContext.Provider value={{ getQuestions, postQuestion, listen, getPSWD, postRSVP, getRSVPStatus  }}>
       <Authorization>
         <App />
       </Authorization>
