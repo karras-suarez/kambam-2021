@@ -25,7 +25,7 @@ export const RSVPForm = ({ setHasRSVP }) => {
           const response = await postRSVP({ name, email, answer: message });
 
           setHasRSVP(response.key);
-          localStorage.setItem("rsvp", response.key ?? "");
+
           // @ts-expect-error env exists
           if (import.meta.env.MODE === "development") {
             return;
@@ -36,8 +36,7 @@ export const RSVPForm = ({ setHasRSVP }) => {
             email,
             answer: message,
           });
-
-          console.log("Email sent successfully:", res);
+          localStorage.setItem("rsvp", response.key ?? "");
         } catch (error) {
           console.error("Error submitting RSVP:", error);
           alert(
