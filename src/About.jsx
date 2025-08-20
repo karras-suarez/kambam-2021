@@ -1,5 +1,4 @@
-import useMediaQuery from '@mui/material/useMediaQuery';
-import print from "./images/kambam2023 print final.png";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   one,
   two,
@@ -18,6 +17,9 @@ import {
 } from "./images/birthday-photos";
 import goldsnake1 from "./images/goldsnake1.png";
 import goldsnake2 from "./images/goldsnake2.png";
+import { RSVPForm } from "./components/rsvp/Form";
+import { useEffect, useState } from "react";
+import { useFirebase } from "./components/firebase/FirebaseContext";
 
 const random = Math.floor(Math.random() * 13);
 const numbers = [
@@ -38,6 +40,20 @@ const numbers = [
 ];
 export const About = () => {
   const matches = useMediaQuery("(min-width:600px)");
+  const { getRSVPStatus } = useFirebase();
+  const [hasRSVP, setHasRSVP] = useState(() => localStorage.getItem("rsvp"));
+
+  useEffect(() => {
+    if (!hasRSVP) {
+      return;
+    }
+    getRSVPStatus(hasRSVP).then((status) => {
+      if (!status) {
+        console.log("ds no status");
+        setHasRSVP(null);
+      }
+    });
+  }, [hasRSVP]);
 
   return (
     <>
@@ -53,13 +69,11 @@ export const About = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          zIndex:-1
+          zIndex: -1,
         }}
-      >
-        
-      </div>
+      ></div>
       <div className="card" style={{ width: matches ? "800px" : "90%" }}>
-      <img
+        <img
           style={{
             // position: "absolute",
             left: "0",
@@ -89,7 +103,8 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>Dress code:</b> Play dress up! Whatever that means to you. Bonus points for all things frilly, shimmery, snakey, or gold.
+          <b>Dress code:</b> Play dress up! Whatever that means to you. Bonus
+          points for all things frilly, shimmery, snakey, or gold.
         </p>
         <p>
           {" "}
@@ -97,7 +112,9 @@ export const About = () => {
           <b>entertainment:</b> still being finalized ;)
         </p>
         <p>
-          KAMBAM is BACK. With a theme centered around Kami's snake engagement ring, come to Kami's favorite place (her backyard) and have a great night of art, friendship, and entertainement.
+          KAMBAM is BACK. With a theme centered around Kami's snake engagement
+          ring, come to Kami's favorite place (her backyard) and have a great
+          night of art, friendship, and entertainement.
           {/* <br />
           <br />
           No presents necessary, just bring the gift that is yourself! There will be opportunity to tip the performers :)
@@ -110,8 +127,7 @@ export const About = () => {
           situation you desire! We have 2 fire pits, relaxing areas, and a big
           open yard area for you to find your personal space.
           <br /> <br /> Dog friendly(if Bezi has met them) */}
-          
-        {/* <p>
+          {/* <p>
           {" "}
           <br />
           <b>Music:</b> We are so excited to be joined by musical talent such as <a target='blank' href="https://www.instagram.com/jewelridersband/"><b>Jewel Riders</b></a> and <a target='blank' href="https://instagram.com/mr.boy_pdx"><b>Mr.Boy</b></a> this year!
@@ -126,11 +142,13 @@ export const About = () => {
           margin: "20px auto",
         }}
       >
-        <h2 className="about-headers" style={{ textAlign: "center" }}>Agenda</h2>
+        <h2 className="about-headers" style={{ textAlign: "center" }}>
+          Agenda
+        </h2>
         <div style={{ display: matches ? "flex" : "block", margin: "auto" }}>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
             <b>6:00pm:</b> <br />
-            doors open -  sign the card, take a photo, do some screen printing
+            doors open - sign the card, take a photo, do some screen printing
           </p>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
             <b>7:00pm:</b> <br />
@@ -139,7 +157,7 @@ export const About = () => {
           {/* <p style={{ marginBottom: "20px", marginLeft: "20px"  }}>
             <b>8:00pm</b> <br />
             Music Begins <br /> */}
-            {/* and all things. <br /> <br />
+          {/* and all things. <br /> <br />
             (Adam Michel must be pre approve content) <br />
             <br /> just kidding <br />
             probably */}
@@ -150,12 +168,16 @@ export const About = () => {
         className="card"
         style={{ width: matches ? "800px" : "90%", textAlign: "left" }}
       >
-        <h2 className="about-headers" style={{ textAlign: "center" }}>what else??</h2>
+        <h2 className="about-headers" style={{ textAlign: "center" }}>
+          what else??
+        </h2>
         <ul style={{ textAlign: "left" }}>
-          <li style={{marginBottom: "10px"}}>take a photo at our Kambam photo booth.</li>
-          <li style={{marginBottom: "10px"}}>BYOB.</li>
-          <li style={{marginBottom: "10px"}}>pre-rolls provided.</li>
-          <li style={{marginBottom: "10px"}}>On site screen printing</li>
+          <li style={{ marginBottom: "10px" }}>
+            take a photo at our Kambam photo booth.
+          </li>
+          <li style={{ marginBottom: "10px" }}>BYOB.</li>
+          <li style={{ marginBottom: "10px" }}>pre-rolls provided.</li>
+          <li style={{ marginBottom: "10px" }}>On site screen printing</li>
         </ul>
         {/* <div
           style={{
@@ -164,14 +186,38 @@ export const About = () => {
             padding: "20px",
           }}
         > */}
-          {/* <img
+        {/* <img
             style={{ margin: "auto", width: matches ? "300px" : "90%" }}
             src={print}
             alt="print design"
           /> */}
-          {/* <p>print example</p>
+        {/* <p>print example</p>
         </div> */}
       </div>
+
+      <div
+        className="card"
+        style={{
+          width: matches ? "800px" : "90%",
+          textAlign: "left",
+          margin: "20px auto",
+        }}
+      >
+        <h2 className="about-headers" style={{ textAlign: "center" }}>
+          RSVP
+        </h2>
+
+        {hasRSVP ? <RSVPConfirmation /> : <RSVPForm setHasRSVP={setHasRSVP} />}
+      </div>
     </>
+  );
+};
+
+const RSVPConfirmation = () => {
+  return (
+    <div>
+      <p>Thank you for your RSVP! We look forward to celebrating with you.</p>
+      <p>If you have any questions, feel free to reach out.</p>
+    </div>
   );
 };

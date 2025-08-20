@@ -33,28 +33,52 @@ export const listen = (formatter, setter) => {
   });
 };
 
-export const getPSWD = async() => {
+export const getPSWD = async () => {
   try {
-    const p = await get(child(dbRef, 'pwd'));
+    const p = await get(child(dbRef, "pwd"));
     if (p.exists()) {
       return p.val();
     } else {
       return null;
     }
   } catch (error) {
-      console.log("error", error);
+    console.log("error", error);
   }
-}
+};
 
 export const getQuestions = async () => {
   try {
-    const snap = await get(child(dbRef, 'questions'));
+    const snap = await get(child(dbRef, "questions"));
     if (snap.exists()) {
       return snap.val();
     } else {
       return [];
     }
   } catch (error) {
-    console.log("error", error)
+    console.log("error", error);
+  }
+};
+
+export const postRSVP = ({ name, email, answer }) => {
+  const updates = {
+    name,
+    email,
+    answer,
+  };
+
+  return push(ref(db, "rsvp"), updates);
+};
+
+export const getRSVPStatus = async (key) => {
+
+  try {
+    const snap = await get(child(dbRef, `rsvp/${key}`));
+    if (snap.exists()) {
+      return snap.val();
+    } else {
+      return "";
+    }
+  } catch (error) {
+    console.log("error", error);
   }
 };
