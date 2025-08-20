@@ -49,7 +49,6 @@ export const About = () => {
     }
     getRSVPStatus(hasRSVP).then((status) => {
       if (!status) {
-        console.log("ds no status");
         setHasRSVP(null);
       }
     });
