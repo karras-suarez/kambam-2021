@@ -132,7 +132,9 @@ export const About = () => {
         <p>
         <b>Details:</b> KAMBAM is BACK. With a theme centered around Kami's snake engagement
           ring, come to Kami's favorite place (her backyard) and have a great
-          night of art, friendship, and entertainement.
+          night of art, friendship, and entertainement. <br/><br/>
+          We also weren't able to have an engagement party while trying to keep up with everything this year, so maybe help us make up for that here?
+
           {/* <br />
           <br />
           No presents necessary, just bring the gift that is yourself! There will be opportunity to tip the performers :)
