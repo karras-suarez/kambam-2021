@@ -60,7 +60,9 @@ export const RSVPForm = ({ setHasRSVP }) => {
           }}
         >
           <div>
-            <div><b>Name:</b></div>
+            <div>
+              <b>Name:</b>
+            </div>
             <label>
               <Field
                 name="name"
@@ -70,7 +72,6 @@ export const RSVPForm = ({ setHasRSVP }) => {
               />
             </label>
           </div>
-
           <div>
             <b>email:</b>
           </div>
@@ -84,14 +85,29 @@ export const RSVPForm = ({ setHasRSVP }) => {
               />
             </label>
           </div>
-          <br/>
-          <div><b>Please use the next area to let us know:</b> <ul className="questions">
-            <li>What you would order from <a href="https://public.fotmwings.com/menus/fotm_interstate_menu.pdf" target="_blank">Fire on the Mountain</a> if you were at home? (dietary restrictions?)</li>
-          <li>If you would like to sign up for stage time. Comedy? Poetry? Music? powerpoint? </li>
-          <li>Anything else you would like to add!</li>
+          <br />
+          <div>
+            <b>Please use the next area to let us know:</b>{" "}
+            <ul className="questions">
+              <li>
+                What you would order from F
+                <a
+                  href="https://public.fotmwings.com/menus/fotm_interstate_menu.pdf"
+                  target="_blank"
+                >
+                  ire on the Mountain
+                </a>{" "}
+                if you were at home? (dietary restrictions?)
+              </li>
+              <li>
+                If you would like to sign up for stage time. Comedy? Poetry?
+                Music? powerpoint?
+              </li>
+              <li>Are you bringing anybody?</li>
+              <li>Anything else you would like to add!</li>
             </ul>
-            </div>
-          
+          </div>
+
           <div>
             <label>
               <Field

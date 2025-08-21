@@ -103,7 +103,11 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>Food:</b> Fire on the Mountain catering
+          <b>Food:</b> <a
+                  href="https://public.fotmwings.com/menus/fotm_interstate_menu.pdf"
+                  target="_blank"
+                >Fire on the Mountain catering
+        </a>(vegan options available)
         </p>
         <p>
           {" "}
