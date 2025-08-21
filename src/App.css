@@ -77,6 +77,14 @@ h3{
   /* margin-left: ; */
 }
 
+.questions li{
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+ul.questions{
+  padding-left: 10px;
+  font-size: 0.9em;
+}
 
 .date{
   text-shadow: 3px 3px 2px black;

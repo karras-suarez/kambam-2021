@@ -42,7 +42,7 @@ export const Home = () => {
         <h3 className="date">
           Saturday august 30th
         </h3>
-        <a style={{ margin: "auto",color: "#FFF", position:"relative", zIndex:500 }} href="/about">DETAILS</a>
+        <a style={{ margin: "auto",color: "#000", position:"relative", zIndex:500, fontWeight: "bold", backgroundColor: "rgb(242 212 222)", padding: "10px 20px", borderRadius: "5px", boxShadow: "0 0 10px 0 rgba(0, 0, 0, 1)", }} href="/about">DETAILS</a>
         
       </div>
     </>

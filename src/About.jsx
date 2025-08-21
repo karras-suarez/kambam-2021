@@ -72,6 +72,7 @@ export const About = () => {
         }}
       ></div>
       <div className="card" style={{ width: matches ? "800px" : "90%" }}>
+      <h2 className="about-headers" style={{ textAlign: "center", width: "100%", marginLeft: "0" }}>A Backyard Birthday Show</h2> 
         <img
           style={{
             // position: "absolute",
@@ -83,7 +84,12 @@ export const About = () => {
           src={goldsnake2}
           alt="people enjoying a party"
         />
-        <h2>A Backyard Birthday Show</h2>
+        
+        <p>
+          {" "}
+          <br />
+          <b>Location:</b> Kami's Backyard <br/> 10209 N Oswego Ave, Portland, OR 97203
+        </p>
         <p>
           {" "}
           <br />
@@ -102,16 +108,24 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>Dress code:</b> Play dress up! Whatever that means to you. Bonus
+          <b>Dress code:</b> Play dress up with me! Whatever that means to you. Bonus
           points for all things frilly, shimmery, snakey, or gold.
+          It's really up to interpretation, but if you need to be pushed in a direction, you can use <a href="https://pin.it/1I3bKnrr0/" target="_blank">this board</a> as a guide.
         </p>
         <p>
           {" "}
           <br />
-          <b>entertainment:</b> still being finalized ;)
+          <b>Entertainment:</b> <br/>
+          <ul>
+            <li>Kaitlyn Saul - comedy</li>
+            <li>Hannah Carter - comedy</li>
+            
+          </ul>
+          Other performances still being finalized ;)
         </p>
+        <br />
         <p>
-          KAMBAM is BACK. With a theme centered around Kami's snake engagement
+        <b>Details:</b> KAMBAM is BACK. With a theme centered around Kami's snake engagement
           ring, come to Kami's favorite place (her backyard) and have a great
           night of art, friendship, and entertainement.
           {/* <br />
@@ -151,16 +165,11 @@ export const About = () => {
           </p>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
             <b>7:00pm:</b> <br />
-            Group photo and Show begins
+            Group photo and Show begins - Kami will welcome everyone and then introduce the non musical acts. <br/>
+            <b>?:??pm:</b> <br />
+            When the non musical acts are done, we will take a short break and then start the music.
           </p>
-          {/* <p style={{ marginBottom: "20px", marginLeft: "20px"  }}>
-            <b>8:00pm</b> <br />
-            Music Begins <br /> */}
-          {/* and all things. <br /> <br />
-            (Adam Michel must be pre approve content) <br />
-            <br /> just kidding <br />
-            probably */}
-          {/* </p> */}
+     
         </div>
       </div>
       <div
@@ -178,20 +187,6 @@ export const About = () => {
           <li style={{ marginBottom: "10px" }}>pre-rolls provided.</li>
           <li style={{ marginBottom: "10px" }}>On site screen printing</li>
         </ul>
-        {/* <div
-          style={{
-            width: "calc(100% - 20px)",
-            textAlign: "center",
-            padding: "20px",
-          }}
-        > */}
-        {/* <img
-            style={{ margin: "auto", width: matches ? "300px" : "90%" }}
-            src={print}
-            alt="print design"
-          /> */}
-        {/* <p>print example</p>
-        </div> */}
       </div>
 
       <div
@@ -203,7 +198,7 @@ export const About = () => {
         }}
       >
         <h2 className="about-headers" style={{ textAlign: "center" }}>
-          RSVP
+          RSVP for Benefits!
         </h2>
 
         {hasRSVP ? <RSVPConfirmation /> : <RSVPForm setHasRSVP={setHasRSVP} />}

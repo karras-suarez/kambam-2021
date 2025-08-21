@@ -60,19 +60,19 @@ export const RSVPForm = ({ setHasRSVP }) => {
           }}
         >
           <div>
-            <div>Who are you!</div>
+            <div><b>Name:</b></div>
             <label>
               <Field
                 name="name"
                 type="text"
                 required
-                placeholder="Ian McButtlick"
+                placeholder="Buttlick Buttlicker"
               />
             </label>
           </div>
 
           <div>
-            Provide your email to receive any updates we might need to send
+            <b>email:</b>
           </div>
           <div>
             <label>
@@ -80,12 +80,18 @@ export const RSVPForm = ({ setHasRSVP }) => {
                 name="email"
                 type="email"
                 required
-                placeholder="Ian@McButtlick.com"
+                placeholder="Buttlick@Buttlicker.com"
               />
             </label>
           </div>
-
-          <div>Do you have a favorite item from fire on the mountain?</div>
+          <br/>
+          <div><b>Please use the next area to let us know:</b> <ul className="questions">
+            <li>What you would order from <a href="https://public.fotmwings.com/menus/fotm_interstate_menu.pdf" target="_blank">Fire on the Mountain</a> if you were at home? (dietary restrictions?)</li>
+          <li>If you would like to sign up for stage time. Comedy? Poetry? Music? powerpoint? </li>
+          <li>Anything else you would like to add!</li>
+            </ul>
+            </div>
+          
           <div>
             <label>
               <Field
@@ -93,7 +99,7 @@ export const RSVPForm = ({ setHasRSVP }) => {
                 name="message"
                 style={{ height: "50px", width: "100%" }}
                 required
-                placeholder="I'll eat anything, but I love the fire on the mountain wings!"
+                placeholder="I don't know anything, but I'm coming!"
               />
             </label>
           </div>
