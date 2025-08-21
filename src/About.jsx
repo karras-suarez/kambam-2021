@@ -15,8 +15,8 @@ import {
   thirteen,
   fourteen,
 } from "./images/birthday-photos";
-import goldsnake1 from "./images/goldsnake1.png";
-import goldsnake2 from "./images/goldsnake2.png";
+import goldsnake1 from "./images/goldsnake1.jpeg";
+import goldsnake2 from "./images/goldsnake2.jpeg";
 import { RSVPForm } from "./components/rsvp/Form";
 import { useEffect, useState } from "react";
 import { useFirebase } from "./components/firebase/FirebaseContext";

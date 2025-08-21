@@ -1,6 +1,6 @@
-import kambam from "./images/kambam2025.png"
+import kambam from "./images/kambam2025 Large.png"
 import Sparkles from "./components/Sparkles"
-import banner from "./images/snakeBanner.png"
+
 
 export const Home = () => {
   return (
