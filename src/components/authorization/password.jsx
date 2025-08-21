@@ -25,18 +25,18 @@ export const Password = ({ setIsAuthorized }) => {
   };
 
   return (
-    <div className="password">
+    <div style={{fontSize: "18px", width: "100%", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
       <h1>Protected</h1>
-      <p>This page is protected by a password.</p>
+      <p style={{fontSize: "18px"}} >This page is protected by a password.</p>
       <p>Enter the password to access the content.</p>
       <form onSubmit={verifyPassword}>
-        <input
+        <input style={{fontSize: "18px"}}
           name="password"
           autoComplete="yes"
           type="password"
           placeholder="Enter password"
         />
-        <button type="submit">Submit</button>
+        <button style={{fontSize: "18px"}} type="submit">Submit</button>
       </form>
     </div>
   );
