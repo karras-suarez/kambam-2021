@@ -120,9 +120,10 @@ export const About = () => {
           {" "}
           <br />
           <b>Entertainment:</b> <br/>
-          <ul>
+          <ul style={{paddingLeft: "0"}}>
             <li>Kaitlyn Saul - comedy</li>
             <li>Hannah Carter - comedy</li>
+            <li>Amie Santavicca - music</li>
             
           </ul>
           Other performances still being finalized ;)
