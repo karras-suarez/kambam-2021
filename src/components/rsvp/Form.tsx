@@ -89,16 +89,7 @@ export const RSVPForm = ({ setHasRSVP }) => {
           <div>
             <b>Please use the next area to let us know:</b>{" "}
             <ul className="questions">
-              <li>
-                What you would order from F
-                <a
-                  href="https://public.fotmwings.com/menus/fotm_interstate_menu.pdf"
-                  target="_blank"
-                >
-                  ire on the Mountain
-                </a>{" "}
-                if you were at home? (dietary restrictions?)
-              </li>
+         
               <li>
                 If you would like to sign up for stage time. Comedy? Poetry?
                 Music? powerpoint?
