@@ -1,13 +1,11 @@
-import kambam from "./images/kambam2025 Large.png"
-import Sparkles from "./components/Sparkles"
+// import kambam from "./images/kambam2025 Large.png" 
 
 
 export const Home = () => {
   return (
     <>
-      <Sparkles count={25} color="#FFF" />
       <div className="movement">
-      <div
+      {/* <div
         style={{
           position: 'fixed',
           top: 0,
@@ -30,17 +28,17 @@ export const Home = () => {
           pointerEvents: 'none',
           zIndex: -10
         }}
-      />
-        <img src={kambam} alt="hey" className="kambam" />
-        <h2 style={{color: "#FFF",zIndex: 100, position: "relative", fontFamily: 'fira code'}}>
-          The year of the engagement
+      /> */}
+        {/* <img src={kambam} alt="hey" className="kambam" /> */}
+        <h2 style={{color: "#000",zIndex: 100, position: "relative", fontFamily: 'fira code'}}>
+          Spatial Design Club
         </h2>
       </div>
       <div className="intro">
 
-      <h1>KAMBAM2025</h1>
+      <h1>KAMBAM2026</h1>
         <h3 className="date">
-          Saturday august 30th
+          Saturday august 29th
         </h3>
         <a style={{ margin: "auto",color: "#000", position:"relative", zIndex:500, fontWeight: "bold", backgroundColor: "rgb(242 212 222)", padding: "10px 20px", borderRadius: "5px", boxShadow: "0 0 10px 0 rgba(0, 0, 0, 1)", }} href="/about">DETAILS</a>
         
