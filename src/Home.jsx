@@ -194,7 +194,7 @@ export const Home = () => {
             left: "0",
             top: "0",
             // transform: "translate(-50%, -50%)",
-            width: "900px",
+            width: matches ? "1000px" : "90%",
           }}
           src={kami6}
           alt="people enjoying a party"
@@ -231,7 +231,7 @@ export const Home = () => {
             left: "0",
             top: "0",
             // transform: "translate(-50%, -50%)",
-            width: "900px",
+            width: matches ? "1000px" : "90%",
           }}
           src={kami5}
           alt="people enjoying a party"
@@ -241,7 +241,7 @@ export const Home = () => {
         className="card"
         style={{ width: matches ? "1000px" : "90%", textAlign: "left", backgroundColor: "#E0D4F5" }}
       >
-         <div style={{width: "40%", display: "inline-block", marginLeft: "80px"}}>
+         <div style={{width: matches ? "40%" : "90%", display: "inline-block", marginLeft: matches ? "80px" : "0"}}>
         <h2 className="about-headers" style={{ textAlign: "center" }}>
           what else??
         </h2>
@@ -261,7 +261,7 @@ export const Home = () => {
             left: "0",
             top: "0",
             // transform: "translate(-50%, -50%)",
-            width: "40%",
+            width: matches ? "40%" : "90%",
             verticalAlign: "top",
           }}
           src={kami4}
@@ -284,13 +284,13 @@ export const Home = () => {
             left: "0",
             top: "0",
             // transform: "translate(-50%, -50%)",
-            width: "40%",
+            width: matches ? "40%" : "90%",
             verticalAlign: "top",
           }}
           src={kami3}
           alt="people enjoying a party"
         />
-        <div style={{width: "40%", display: "inline-block", marginLeft: "80px"}}>
+        <div style={{width: matches ? "40%" : "90%", display: "inline-block", marginLeft: matches ? "80px" : "0px", marginTop: matches ? "0px" : "20px"}}>
         <h2 className="about-headers" style={{ textAlign: "center", display: "inline-block" }}>
           RSVP for Benefits!
         </h2>
@@ -305,7 +305,7 @@ export const Home = () => {
             left: "0",
             top: "0",
             // transform: "translate(-50%, -50%)",
-            width: "1000px",
+           width: matches ? "1000px" : "90%",
           }}
           src={kami2}
           alt="people enjoying a party"
