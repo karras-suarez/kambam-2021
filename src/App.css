@@ -1,3 +1,8 @@
+:root {
+  /* vertical space the nav takes up, including its margins */
+  --nav-space: 85px;
+}
+
 .App {
   text-align: center;
 
@@ -15,22 +20,54 @@ html {
   color: #61dafb;
 }
 
-nav {
-  /* max-width: 80vw; */
-  margin: auto;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax( 1fr);
+.site-nav {
+  /* sits above .movement, which is an absolutely positioned full-viewport layer */
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  /* width: 75vw; */
+  gap: 4px;
+  box-sizing: border-box;
+  width: calc(100% - 24px);
+  max-width: 640px;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(28, 54, 100, 0.15);
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(28, 54, 100, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-nav a {
-
-  margin: 20px 0;
+.site-nav a {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #1c3664;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
   text-decoration: none;
-  font-weight: 300;
-  font-size: 3vmin;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+  background-color: rgba(242, 212, 222, 0.6);
+}
+
+.site-nav a.is-active {
+  background-color: rgb(242 212 222);
+  color: #000;
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid #1c3664;
+  outline-offset: 2px;
 }
 
 h1 {
@@ -128,13 +165,37 @@ ul.questions{
   z-index: 0;
   overflow: none;
   height: 100vh;
+  box-sizing: border-box;
+  /* clear the nav sitting at the top of the page */
+  padding-top: 115px;
+  /* decorative full-viewport layer: never intercept clicks meant for the page */
+  pointer-events: none;
   /* background-image: url('./images/kambam2025-bg-mobile.jpeg'); */
-  background-size: cover;
-  background-position: bottom;
+  /* background-size: cover; */
+  /* background-position: bottom; */
+}
+.movement > * {
+  pointer-events: auto;
 }
 .intro {
+  position: relative;
   z-index: 0;
-  /* padding-bottom: 5vh; */
+  box-sizing: border-box;
+  /* fill exactly what's left below the nav so nothing falls under the fold */
+  min-height: calc(100vh - var(--nav-space));
+  min-height: calc(100svh - var(--nav-space));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 7vh, 80px);
+  padding: 0 20px 24px;
+}
+
+/* spacing is handled by the flex column above, not by fixed margins */
+.intro h1,
+.intro h3 {
+  margin: 0;
 }
 
 .background{
@@ -215,6 +276,7 @@ h2 {
     position: absolute;
     z-index: 20;
     top:0;
+    padding-top: 100px;
     /* width: 100vw; */
     overflow: hidden;
     background-position: 0 -400px;
@@ -253,22 +315,18 @@ h2 {
     /* background-color: white; */
   }
 
-  nav {
-    max-width: 700px;
-    margin: auto;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax( 1fr);
-    align-items: center;
-    width: 75vw;
+  :root {
+    --nav-space: 115px;
   }
-  
-  nav a {
-  
-    margin: 40px 0;
-    text-decoration: none;
-    font-weight: 500;
-  
+
+  .site-nav {
+    gap: 8px;
+    margin: 30px auto;
+  }
+
+  .site-nav a {
+    padding: 10px 22px;
+    font-size: 16px;
   }
 
   .moon{

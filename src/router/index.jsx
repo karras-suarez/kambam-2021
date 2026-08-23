@@ -9,7 +9,7 @@ import { Password } from "../components/authorization/password";
 export const Routes = () => {
   return (
     <>
-      
+      <Header/>
       <Router>
         <div>
           <Switch>
@@ -32,7 +32,6 @@ export const Routes = () => {
           </Switch>
         </div>
       </Router>
-      <Header />
     </>
   );
 };
