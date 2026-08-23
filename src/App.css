@@ -6,7 +6,7 @@
   font-family: 'Fira Code';
 }
 html {
-  background-color: #d5eff8;
+  background-color: #7BAFD4;
   width: 100vw;
   
 }
@@ -35,22 +35,21 @@ nav a {
 
 h1 {
   font-weight: 900;
-  margin-top: 20vh;
+
   margin-left: 40px;
   margin-right: 40px;
-  font-size: 8vmin;
+  font-size: 10vmin;
   /* text-shadow: 1px 1px 10px white; */
-  color: #d5eff8;
-  opacity: 0;
+  color: #1A1550;
+  text-align: center;
+
 }
 h3{
-  font-family: 'Nunito';
+  /* font-family: 'Nunito'; */
   font-size: 30px;
-  color: #FFF;
   z-index: 100;
   position: relative;
-  width: 50%;
-  margin: 150px auto;
+  margin: auto;
 }
 
 .about-headers{
@@ -224,11 +223,10 @@ h2 {
     /* background-image: url('./images/kambam'); */
   }
   h1 {
-    font-weight: 900;
-    margin-top: 10vh;
+    font-weight: 1000;
     margin-bottom: 0;
-    font-size: 9vmin;
-    font-family: 'bagel FAT one'
+    font-size: 11vmin;
+    font-family: 'nunito'
   }
   h2 {
     margin-top: 20px;
@@ -237,12 +235,14 @@ h2 {
     font-size: 3vmin;
   }
   h3{
-    font-family: 'Nunito';
+    /* font-family: 'Nunito'; */
     font-size: 50px;
-    color: #FFF;
+    color: #7BAFD4;
     z-index: 100;
     position: relative;
-    margin-top: 350px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
   }
   .kambam {
     width: 60vw;
@@ -313,7 +313,7 @@ h2 {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.95);
   margin: auto;
   padding: 40px;
   box-sizing: border-box;

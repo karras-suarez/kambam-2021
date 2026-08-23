@@ -15,6 +15,7 @@ import {
   thirteen,
   fourteen,
 } from "./images/birthday-photos";
+import kami from "./images/kami-yellow-mirror.JPG" 
 
 import { RSVPForm } from "./components/rsvp/Form";
 import { useEffect, useState } from "react";
@@ -70,8 +71,10 @@ export const About = () => {
         }}
       ></div>
       <div className="card" style={{ width: matches ? "800px" : "90%" }}>
-      <h2 className="about-headers" style={{ textAlign: "center", width: "100%", marginLeft: "0" }}>A Backyard Birthday Party</h2> 
-        {/* <img
+        <h1>KAMBAM 2026</h1>
+        <h3>Join the Club</h3>
+      {/* <h2 className="about-headers" style={{ textAlign: "center", width: "100%", marginLeft: "0", color:"#E8578A" }}>A Backyard Birthday Party</h2>  */}
+        <img
           style={{
             // position: "absolute",
             left: "0",
@@ -79,9 +82,9 @@ export const About = () => {
             // transform: "translate(-50%, -50%)",
             width: "100%",
           }}
-          src={goldsnake2}
+          src={kami}
           alt="people enjoying a party"
-        /> */}
+        />
         
         <p>
           {" "}
@@ -149,6 +152,7 @@ export const About = () => {
           textAlign: "left",
           width: matches ? "800px" : "90%",
           margin: "20px auto",
+          backgroundColor: "#FDE8F0"
         }}
       >
         <h2 className="about-headers" style={{ textAlign: "center" }}>
@@ -171,7 +175,7 @@ export const About = () => {
       </div>
       <div
         className="card"
-        style={{ width: matches ? "800px" : "90%", textAlign: "left" }}
+        style={{ width: matches ? "800px" : "90%", textAlign: "left", backgroundColor: "#E0D4F5" }}
       >
         <h2 className="about-headers" style={{ textAlign: "center" }}>
           what else??
