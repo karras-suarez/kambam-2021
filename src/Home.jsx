@@ -19,6 +19,11 @@ import kami from "./images/kami-yellow-mirror.JPG"
 import kami2 from "./images/kami-tiger.JPG" 
 import kami3 from "./images/kami-nathan.jpg" 
 import kami4 from "./images/kami-dags.jpg" 
+import kami5 from "./images/kami-cat.jpeg" 
+import kami6 from "./images/kami-video-bucket.jpeg" 
+import kami7 from "./images/kami-looney.JPG" 
+import kami8 from "./images/techie.JPG" 
+import kami9 from "./images/kami-bucket-floral.JPG" 
 
 import { RSVPForm } from "./components/rsvp/Form";
 import { useEffect, useState } from "react";
@@ -116,8 +121,43 @@ export const Home = () => {
         <p>
           {" "}
           <br />
-          <b>Fashion Inspo:</b>This year we are celebrating Techie Club launching Spatial Design Club and encourage the Techie Club aesthetic! <a href="https://pin.it/1zsByg4BL" target="_blank">this board</a> as a guide.
+          <b>Fashion Inspo:</b>This year we are celebrating Techie Club launching Spatial Design Club and encouraging the Techie Club aesthetic! <span style={{backgroundColor: "#E0D4F5"}}>Aristic, Technical, Playful.</span> <a href="https://pin.it/1zsByg4BL" target="_blank">this board</a> as a guide.
         </p>
+        <div style={{ display: matches ? "grid" : "block", margin: "auto", gridTemplateColumns: "1fr 1fr 1fr", width: "100%" }}>
+          <img
+          style={{
+            // position: "absolute",
+            left: "0",
+            top: "0",
+            // transform: "translate(-50%, -50%)",
+            width: "100%",
+          }}
+          src={kami8}
+          alt="people enjoying a party"
+        />
+          <img
+          style={{
+            // position: "absolute",
+            left: "0",
+            top: "0",
+            // transform: "translate(-50%, -50%)",
+            width: "100%",
+          }}
+          src={kami7}
+          alt="people enjoying a party"
+        />
+          <img
+          style={{
+            // position: "absolute",
+            left: "0",
+            top: "0",
+            // transform: "translate(-50%, -50%)",
+            width: "100%",
+          }}
+          src={kami9}
+          alt="people enjoying a party"
+        />
+        </div>
         <p>
           {" "}
           <br />
@@ -148,6 +188,17 @@ export const Home = () => {
           <b>Music:</b> We are so excited to be joined by musical talent such as <a target='blank' href="https://www.instagram.com/jewelridersband/"><b>Jewel Riders</b></a> and <a target='blank' href="https://instagram.com/mr.boy_pdx"><b>Mr.Boy</b></a> this year!
         </p> */}
         </p>
+        <img
+          style={{
+            // position: "absolute",
+            left: "0",
+            top: "0",
+            // transform: "translate(-50%, -50%)",
+            width: "900px",
+          }}
+          src={kami6}
+          alt="people enjoying a party"
+        />
       </div>
       <div
         className="card"
@@ -161,20 +212,30 @@ export const Home = () => {
         <h2 className="about-headers" style={{ textAlign: "center" }}>
           Agenda
         </h2>
-        <div style={{ display: matches ? "flex" : "block", margin: "auto" }}>
+        <div style={{ display: matches ? "grid" : "block", margin: "auto", gridTemplateColumns: "1fr 1fr 1fr" }}>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
-            <b>3:00pm:</b> <br />
-            doors open - sign the card, take a photo, do some screen printing
+            <b>3:00pm:</b> doors open  <br /><br />
+            sign the card, take a photo, do some screen printing
           </p>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
-            <b>4:00pm:</b> <br /><br />
-            Group photo and Spatial Design Club content time - Bringing your computer is not required, but it is helpful.<br /><br />
-            <b>Later:</b> <br />
-           
-            Karaoke!!!
+            <b>4:00pm:</b> Group photo & Spatial Design Club content time<br /><br />
+            Bringing your computer is not required, but it is helpful.<br /><br />
+           </p><p style={{ marginBottom: "20px", marginLeft: "20px" }}>
+            <b>Later:</b> Karaoke!!!
           </p>
      
         </div>
+        <img
+          style={{
+            // position: "absolute",
+            left: "0",
+            top: "0",
+            // transform: "translate(-50%, -50%)",
+            width: "900px",
+          }}
+          src={kami5}
+          alt="people enjoying a party"
+        />
       </div>
       <div
         className="card"

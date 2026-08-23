@@ -2,6 +2,9 @@
   /* vertical space the nav takes up, including its margins */
   --nav-space: 85px;
 }
+b{
+  color:#E8578A;
+}
 
 .App {
   text-align: center;
