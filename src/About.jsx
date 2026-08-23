@@ -15,8 +15,7 @@ import {
   thirteen,
   fourteen,
 } from "./images/birthday-photos";
-import goldsnake1 from "./images/goldsnake1.jpeg";
-import goldsnake2 from "./images/goldsnake2.jpeg";
+
 import { RSVPForm } from "./components/rsvp/Form";
 import { useEffect, useState } from "react";
 import { useFirebase } from "./components/firebase/FirebaseContext";
@@ -64,7 +63,6 @@ export const About = () => {
           overflow: "hidden",
           margin: "auto",
           verticalAlign: "middle",
-          backgroundImage: `url(${goldsnake1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -72,8 +70,8 @@ export const About = () => {
         }}
       ></div>
       <div className="card" style={{ width: matches ? "800px" : "90%" }}>
-      <h2 className="about-headers" style={{ textAlign: "center", width: "100%", marginLeft: "0" }}>A Backyard Birthday Show</h2> 
-        <img
+      <h2 className="about-headers" style={{ textAlign: "center", width: "100%", marginLeft: "0" }}>A Backyard Birthday Party</h2> 
+        {/* <img
           style={{
             // position: "absolute",
             left: "0",
@@ -83,7 +81,7 @@ export const About = () => {
           }}
           src={goldsnake2}
           alt="people enjoying a party"
-        />
+        /> */}
         
         <p>
           {" "}
@@ -93,12 +91,12 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>Date:</b> Saturday August 30th 2025
+          <b>Date:</b> Saturday August 29th 2026
         </p>
         <p>
           {" "}
           <br />
-          <b>Time:</b> 6:00pm PST
+          <b>Time:</b> 3:00pm PST
         </p>
         <p>
           {" "}
@@ -112,28 +110,19 @@ export const About = () => {
         <p>
           {" "}
           <br />
-          <b>Dress code:</b> Play dress up with me! Whatever that means to you. Bonus
-          points for all things frilly, shimmery, snakey, or gold.
-          It's really up to interpretation, but if you need to be pushed in a direction, you can use <a href="https://pin.it/1I3bKnrr0/" target="_blank">this board</a> as a guide.
+          <b>Fashion Inspo:</b>This year we are celebrating Techie Club launching Spatial Design Club and encourage the Techie Club aesthetic! <a href="https://pin.it/1zsByg4BL" target="_blank">this board</a> as a guide.
         </p>
         <p>
           {" "}
           <br />
           <b>Entertainment:</b> <br/>
-          <ul style={{paddingLeft: "0"}}>
-            <li>Kaitlyn Saul - comedy</li>
-            <li>Hannah Carter - comedy</li>
-            <li>Amie Santavicca - music</li>
-            
-          </ul>
-          Other performances still being finalized ;)
+          None this year. We are doing backyard karaoke instead!! <br />
+          But anyone who wants to use the mic to open mic things is more than welcome.
         </p>
         <br />
         <p>
-        <b>Details:</b> KAMBAM is BACK. With a theme centered around Kami's snake engagement
-          ring, come to Kami's favorite place (her backyard) and have a great
-          night of art, friendship, and entertainement. <br/><br/>
-          We also weren't able to have an engagement party while trying to keep up with everything this year, so maybe help us make up for that here?
+        <b>Details:</b> Let's have a super chill Kambam and do some karaoke in the backyard. Anyone able to help us set this up??
+        We are also gonna spend a tiny bit of time playing with Spatial Design Club and creating content Kami can use for the website, social media, and when she applies for grants.
 
           {/* <br />
           <br />
@@ -167,14 +156,15 @@ export const About = () => {
         </h2>
         <div style={{ display: matches ? "flex" : "block", margin: "auto" }}>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
-            <b>6:00pm:</b> <br />
+            <b>3:00pm:</b> <br />
             doors open - sign the card, take a photo, do some screen printing
           </p>
           <p style={{ marginBottom: "20px", marginLeft: "20px" }}>
-            <b>7:00pm:</b> <br />
-            Group photo and Show begins - Kami will welcome everyone and then introduce the non musical acts. <br/>
-            <b>?:??pm:</b> <br />
-            When the non musical acts are done, we will take a short break and then start the music.
+            <b>4:00pm:</b> <br /><br />
+            Group photo and Spatial Design Club content time - Bringing your computer is not required, but it is helpful.<br /><br />
+            <b>Later:</b> <br />
+           
+            Karaoke!!!
           </p>
      
         </div>
