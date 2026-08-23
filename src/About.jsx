@@ -70,7 +70,7 @@ export const About = () => {
           zIndex: -1,
         }}
       ></div>
-      <div className="card" style={{ width: matches ? "800px" : "90%" }}>
+      <div className="card" style={{ width: matches ? "1000px" : "90%" }}>
         <h1>KAMBAM 2026</h1>
         <h3>Join the Club</h3>
       {/* <h2 className="about-headers" style={{ textAlign: "center", width: "100%", marginLeft: "0", color:"#E8578A" }}>A Backyard Birthday Party</h2>  */}
@@ -150,7 +150,7 @@ export const About = () => {
         className="card"
         style={{
           textAlign: "left",
-          width: matches ? "800px" : "90%",
+          width: matches ? "1000px" : "90%",
           margin: "20px auto",
           backgroundColor: "#FDE8F0"
         }}
@@ -175,7 +175,7 @@ export const About = () => {
       </div>
       <div
         className="card"
-        style={{ width: matches ? "800px" : "90%", textAlign: "left", backgroundColor: "#E0D4F5" }}
+        style={{ width: matches ? "1000px" : "90%", textAlign: "left", backgroundColor: "#E0D4F5" }}
       >
         <h2 className="about-headers" style={{ textAlign: "center" }}>
           what else??
@@ -193,7 +193,7 @@ export const About = () => {
       <div
         className="card"
         style={{
-          width: matches ? "800px" : "90%",
+          width: matches ? "1000px" : "90%",
           textAlign: "left",
           margin: "20px auto",
         }}

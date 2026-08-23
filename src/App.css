@@ -34,8 +34,8 @@ html {
   max-width: 640px;
   margin: 20px auto;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(28, 54, 100, 0.15);
+  background-color: #E0D4F5;
+  border: 1px solid #1A1550;
   border-radius: 999px;
   box-shadow: 0 4px 20px rgba(28, 54, 100, 0.12);
   backdrop-filter: blur(8px);
@@ -49,7 +49,7 @@ html {
   color: #1c3664;
   font-family: 'Fira Code', monospace;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.01em;
   white-space: nowrap;
   text-decoration: none;
@@ -57,12 +57,18 @@ html {
 }
 
 .site-nav a:hover {
-  background-color: rgba(242, 212, 222, 0.6);
+  background-color: #E8578A;
+  color: white;
 }
 
 .site-nav a.is-active {
-  background-color: rgb(242 212 222);
-  color: #000;
+  background-color: #FEFEFF;
+  /* color: #000; */
+  font-weight: bold;
+}
+
+.site-nav a.is-active:hover {
+ color: #1c3664;
 }
 
 .site-nav a:focus-visible {
@@ -72,7 +78,7 @@ html {
 
 h1 {
   font-weight: 900;
-
+  margin-top: 0;
   margin-left: 40px;
   margin-right: 40px;
   font-size: 10vmin;
@@ -87,6 +93,7 @@ h3{
   z-index: 100;
   position: relative;
   margin: auto;
+  margin-bottom: 30px;
 }
 
 .about-headers{
@@ -224,6 +231,7 @@ h2 {
   margin-top: -30px;
   margin-left: 30px;
   font-weight: 600;
+  margin-bottom: 30px;
   /* letter-spacing: 1.2vmin; */
   font-size: 3vmin;
 }
@@ -288,13 +296,15 @@ h2 {
     font-weight: 1000;
     margin-bottom: 0;
     font-size: 11vmin;
-    font-family: 'nunito'
+    font-family: 'nunito';
+    margin-top: 0;
   }
   h2 {
     margin-top: 20px;
     font-weight: 200;
     /* letter-spacing: 1.2vmin; */
     font-size: 3vmin;
+    margin-bottom: 30px;
   }
   h3{
     /* font-family: 'Nunito'; */
@@ -305,6 +315,7 @@ h2 {
     margin: auto;
     width: 100%;
     text-align: center;
+    margin-bottom: 30px;
   }
   .kambam {
     width: 60vw;

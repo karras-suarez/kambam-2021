@@ -13,9 +13,9 @@ export const Routes = () => {
       <Router>
         <div>
           <Switch>
-            <Route path="/about">
+            {/* <Route path="/about">
               <About />
-            </Route>
+            </Route> */}
             <Route path="/discussion">
               <Discussion />
             </Route>

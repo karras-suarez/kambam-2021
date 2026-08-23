@@ -1,7 +1,7 @@
 const links = [
   { href: "/", label: "Home" },
   { href: "/discussion", label: "Discussion" },
-  { href: "/about", label: "About" },
+  // { href: "/about", label: "About" },
   { href: "/gallery", label: "Gallery" },
 ];
 
