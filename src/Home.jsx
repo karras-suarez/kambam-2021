@@ -252,6 +252,7 @@ export const Home = () => {
           <li style={{ marginBottom: "10px" }}>BYOB.</li>
           <li style={{ marginBottom: "10px" }}>pre-rolls provided.</li>
           <li style={{ marginBottom: "10px" }}>On site screen printing</li>
+          <li style={{ marginBottom: "10px" }}>Bring your tent if you want to spend the night</li>
         </ul>
         </div>
         <img
