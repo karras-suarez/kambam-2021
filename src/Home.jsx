@@ -17,7 +17,7 @@ import {
 } from "./images/birthday-photos";
 import kami from "./images/kami-yellow-mirror.JPG" 
 import kami2 from "./images/kami-tiger.JPG" 
-import kami3 from "./images/kami-nathan.JPG" 
+import kami3 from "./images/kami-nathan.jpg" 
 import kami4 from "./images/kami-dags.jpg" 
 
 import { RSVPForm } from "./components/rsvp/Form";
