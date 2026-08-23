@@ -1,36 +1,29 @@
-export const Header = () => {
-  return (
-    <>
-      {/* Gradient overlay from black to transparent */}
-      
-      {/* <nav
-        // style={{
-        //   marginTop: "20px",
-        //   position: 'absolute',
-        //   bottom: 0,
-        //   zIndex: 6,
-        //   display: 'flex',
-        //   justifyContent: 'center',
-        //   alignItems: 'center',
-        //   // gap: '20px',
-        //   // backgroundColor: 'black',
-          
-        //   borderRadius: '10px',
-        //   width: '100%',
-        //   maxWidth: '800px',
-        //   margin: '30px auto',
-          
-        // }}
-      >
-        <a  style={{ margin: "auto",color: "#FFF" }} href="/">Home</a>
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/discussion", label: "Discussion" },
+  { href: "/about", label: "About" },
+  { href: "/gallery", label: "Gallery" },
+];
 
-        {/* <p style={{ margin: "auto",color: "#FFF" }}>|</p> */}
-        {/* <a style={{ margin: "auto",color: "#FFF" }} href="/discussion">Discussion</a> */}
-        {/* <p style={{ margin: "auto",color: "#FFF" }}>|</p> */}
-        {/* <a style={{ margin: "auto",color: "#FFF" }} href="/about">About</a> */}
-        {/* <p style={{ margin: "auto",color: "#FFF" }}>|</p> */}
-        {/* <a style={{  margin: "auto",color: "#FFF" }} href="/gallery">Gallery</a> */}
-      {/* </nav> */} 
-    </>
+export const Header = () => {
+  const path = window.location.pathname;
+
+  return (
+    <nav className="site-nav">
+      {links.map(({ href, label }) => {
+        const isActive = href === "/" ? path === "/" : path.startsWith(href);
+
+        return (
+          <a
+            key={href}
+            href={href}
+            className={isActive ? "is-active" : undefined}
+            aria-current={isActive ? "page" : undefined}
+          >
+            {label}
+          </a>
+        );
+      })}
+    </nav>
   );
 };
